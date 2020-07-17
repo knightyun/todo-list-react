@@ -3,7 +3,7 @@ import React from 'react';
 class Footer extends React.Component {
     render() {
         return (
-            <div id="footer">
+            <footer>
                 <span>
                     Copyright &copy; 2020
                     <a className="author" href="https://github.com/knightyun">
@@ -13,7 +13,7 @@ class Footer extends React.Component {
                 <span className="clear-todo"
                     onClick={ this.props.onCLearTodo }
                 >clear</span>
-            </div >
+            </footer>
         )
     }
 }

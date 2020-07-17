@@ -156,7 +156,7 @@ class App extends React.Component {
         );
 
         return (
-            <div>
+            <React.Fragment>
                 <Header onAddTodo={ this.handleAddTodo } />
 
                 <Main todoLists={ this.state.todoLists }
@@ -166,7 +166,7 @@ class App extends React.Component {
                     onRenameTodo={ this.handleRenameTodo } />
 
                 <Footer onCLearTodo={ this.handleClearTodo } />
-            </div>
+            </React.Fragment>
         )
     }
 }

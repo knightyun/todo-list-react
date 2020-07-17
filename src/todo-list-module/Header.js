@@ -42,7 +42,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div id="header">
+            <header>
                 <form onSubmit={ this.handleSubmit }>
                     <label className="header-label">ToDoList</label>
                     <input className="header-input" type="text"
@@ -50,7 +50,7 @@ class Header extends React.Component {
                         value={ this.state.todo }
                         placeholder="添加 ToDo" />
                 </form>
-            </div>
+            </header>
         )
     }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 class Main extends React.Component {
     render() {
         return (
-            <div id="main">
+            <main>
                 <DoingTodo doingLists={ this.props.todoLists }
                     onDelItem={ this.props.onDelItem }
                     onExchangeList={ this.props.onExchangeList }
@@ -12,7 +12,7 @@ class Main extends React.Component {
                     onDelItem={ this.props.onDelItem }
                     onExchangeList={ this.props.onExchangeList }
                     onRenameTodo={ this.props.onRenameTodo } />
-            </div>
+            </main>
         )
     }
 }

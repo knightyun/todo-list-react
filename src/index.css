@@ -9,7 +9,7 @@ ul {
 }
 
 
-#header form {
+header form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -33,7 +33,7 @@ ul {
 }
 
 
-#main {
+main {
     padding: 1em 20%;
 }
 .doing-head, .done-head {
@@ -99,7 +99,7 @@ ul {
 }
 
 
-#footer {
+footer {
     text-align: center;
     font-size: .9em;
     color: #666;
