@@ -6,7 +6,7 @@ class Footer extends React.Component {
       <footer>
         <span>
           Copyright &copy; 2020
-                    <a className="author" href="https://github.com/knightyun">
+                    <a className="author" href="https://github.com/knightyun/todo-list-react">
             knightyun.
                     </a>
         </span>
