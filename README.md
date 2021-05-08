@@ -12,7 +12,7 @@
 - 项目可删除，可全部清空；
 - 每项内容可编辑；
 - 支持本地存储，刷新页面数据仍然保留；
-- 包含 `ts + react` 的[版本](./packages/todo-list-react-ts-hooks/README.md)
+- 包含 `ts + react` 的[版本](./packages/todo-list-react-ts/README.md)
 
 ## 使用
 
