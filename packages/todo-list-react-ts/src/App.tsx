@@ -4,9 +4,14 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import TodoContext from "./components/TodoContext";
 
-
 /** class 组件 的 props 类型 */
 interface Props {}
+
+/** todo 单项类型 */
+export type Item = string;
+
+/** todo 列表类型 */
+export type Lists = Item[];
 
 /** class 组件 state 的类型 */
 export interface Todo {
@@ -16,38 +21,33 @@ export interface Todo {
 
 interface IApp extends App {}
 
+/** 传递给子组件的处理函数 */
 export interface Handlers {
   handleDelItem: IApp["handleDelItem"];
   handleExchangeList: IApp["handleExchangeList"];
   handleRenameTodo: IApp["handleRenameTodo"];
 }
 
-/** todo 单项类型 */
-export type Item = string;
-
-/** todo 列表类型 */
-export type Lists = Item[];
-
 /** todo 项目类型 */
 export type TodoType = "todoList" | "doneList";
 
 // 组件的类型参数：第一个为组件接收参数的类型，第二个为 state 的类型；
 export default class App extends React.Component<Props, Todo> {
-  state: Todo = {
+  readonly state: Todo = {
     todoLists: [], // 待做项
     doneLists: [], // 完成项
   };
 
   handlers: Handlers = {
-    handleDelItem: this.handleDelItem,
-    handleExchangeList: this.handleExchangeList,
-    handleRenameTodo: this.handleRenameTodo,
+    handleDelItem: this.handleDelItem.bind(this),
+    handleExchangeList: this.handleExchangeList.bind(this),
+    handleRenameTodo: this.handleRenameTodo.bind(this),
   };
 
   constructor(props: Props) {
     super(props);
+    if (localStorage.todo) this.state = JSON.parse(localStorage.todo);
 
-    if (localStorage.todo) this.state = localStorage.todo;
     this.handleAddTodo = this.handleAddTodo.bind(this);
     this.handleDelItem = this.handleDelItem.bind(this);
     this.handleExchangeList = this.handleExchangeList.bind(this);
@@ -58,16 +58,13 @@ export default class App extends React.Component<Props, Todo> {
   /**
    * 新增 todo 项（正在进行）
    *
-   * @param {string} item - todo 项目
+   * @param {Item} item - todo 项目
    * @memberof App
    */
-  handleAddTodo(item: string): void {
-    this.setState(
-      (pre: Todo) => ({
-        todoLists: Array.prototype.concat.call(pre.todoLists, item).reverse(),
-      }),
-      () => {}
-    );
+  handleAddTodo(item: Item): void {
+    this.setState((pre: Todo) => ({
+      todoLists: Array.prototype.concat.call(pre.todoLists, item).reverse(),
+    }));
   }
 
   /**
@@ -77,7 +74,7 @@ export default class App extends React.Component<Props, Todo> {
    * @param {string} type - 在指定列表中删除
    * @memberof App
    */
-  handleDelItem(idx: number, type: TodoType) {
+  handleDelItem(idx: number, type: TodoType): void {
     if (type === "todoList") {
       this.setState((pre) => {
         const _todoLists: Todo["todoLists"] = pre.todoLists.slice();
@@ -94,8 +91,6 @@ export default class App extends React.Component<Props, Todo> {
 
         return { doneLists: _doneLists };
       });
-    } else {
-      return {};
     }
   }
 
@@ -111,7 +106,7 @@ export default class App extends React.Component<Props, Todo> {
     idx: number,
     type: TodoType,
     evt: MouseEvent<HTMLInputElement> | ChangeEvent<HTMLInputElement>
-  ) {
+  ): void {
     evt.preventDefault();
 
     // 待做切换完成
@@ -138,7 +133,7 @@ export default class App extends React.Component<Props, Todo> {
    * 修改 todo 项内容（包括待做与完成项）
    *
    * @param {number} idx      - 要删除的项目索引
-   * @param {string} type     - 在指定列表中删除
+   * @param {TodoType} type   - 在指定列表中删除
    * @param {ChangeEvent} evt - 事件对象
    * @memberof App
    */
@@ -146,8 +141,8 @@ export default class App extends React.Component<Props, Todo> {
     idx: number,
     type: TodoType,
     evt: ChangeEvent<HTMLInputElement>
-  ) {
-    var newTodo: TodoType = evt.target.value as TodoType;
+  ): void {
+    const newTodo: TodoType = evt.target.value as TodoType;
 
     if (type === "todoList") {
       this.setState((pre) => {

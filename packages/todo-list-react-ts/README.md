@@ -1,3 +1,3 @@
 # todo-list-react-ts
 
-`todo-list-react` 的 typescript 版本；
+[todo-list-react](/README.md) 的 `typescript + react` 版本；
