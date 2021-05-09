@@ -19,13 +19,11 @@ export interface Todo {
   readonly doneLists: Lists;
 }
 
-interface IApp extends App {}
-
 /** 传递给子组件的处理函数 */
 export interface Handlers {
-  handleDelItem: IApp["handleDelItem"];
-  handleExchangeList: IApp["handleExchangeList"];
-  handleRenameTodo: IApp["handleRenameTodo"];
+  handleDelItem: App["handleDelItem"];
+  handleExchangeList: App["handleExchangeList"];
+  handleRenameTodo: App["handleRenameTodo"];
 }
 
 /** todo 项目类型 */
