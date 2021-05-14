@@ -41,7 +41,14 @@ export default class Header extends React.Component<Props, State> {
     return (
       <header>
         <form onSubmit={this.handleSubmit}>
-          <label className="header-label">ToDoList</label>
+          <span className="header-label">
+            ToDoList
+            <span className="header-link">
+              <a href="/todo-list-react">JS</a>|
+              <a href="/">TS2</a>|
+              <a href="/todo-list-react-ts-hooks">Hook</a>
+            </span>
+          </span>
           <input
             className="header-input"
             type="text"
