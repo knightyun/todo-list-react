@@ -25,12 +25,13 @@ header form {
   width: 80%;
   font-size: initial;
   text-align: center;
+  color: #ccc;
 }
 .header-link a {
-  margin: 0 .5em;
+  margin: 0 1em;
   color: lightblue;
 }
-.header-link a[href="/"] {
+.header-link a.home {
   color: cyan;
 }
 .header-input {

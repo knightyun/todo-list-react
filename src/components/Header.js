@@ -47,9 +47,9 @@ class Header extends React.Component {
           <span className="header-label">
             ToDoList
             <span className="header-link">
-              <a href="/">JS</a>|
-              <a href="/todo-list-react-ts">TS</a>|
-              <a href="/todo-list-react-ts-hooks">Hook</a>
+              <a href="/" className="home">JS</a>|
+              <a href="/todo-list-react-ts/index.html">TS</a>|
+              <a href="/todo-list-react-ts-hooks/index.html">Hook</a>
             </span>
           </span>
           <input

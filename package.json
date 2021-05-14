@@ -66,7 +66,8 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && lerna run build && lerna exec -- move build ../../docs/%LERNA_PACKAGE_NAME%",
+    "build": "node scripts/build.js",
+    "build-all": "node scripts/build.js && lerna run build && lerna exec -- move build ../../docs/%LERNA_PACKAGE_NAME%",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {

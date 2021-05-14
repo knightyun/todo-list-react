@@ -44,9 +44,9 @@ export default class Header extends React.Component<Props, State> {
           <span className="header-label">
             ToDoList
             <span className="header-link">
-              <a href="/todo-list-react">JS</a>|
-              <a href="/">TS2</a>|
-              <a href="/todo-list-react-ts-hooks">Hook</a>
+              <a href="/">JS</a>|
+              <a href="/todo-list-react-ts/index.html" className="home">TS</a>|
+              <a href="/todo-list-react-ts-hooks/index.html">Hook</a>
             </span>
           </span>
           <input
