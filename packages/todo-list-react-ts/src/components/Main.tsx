@@ -33,7 +33,7 @@ class DoingTodo extends React.Component<DoingProps> {
     return (
       <div className="doing">
         <div className="doing-head">
-          <div className="head-text">正在进行1</div>
+          <div className="head-text">正在进行</div>
           <div className="head-num">{this.props.doingLists.length}</div>
         </div>
         <TodoList

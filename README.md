@@ -3,13 +3,10 @@
 仿照 <http://todolist.cn>，并基于 `create-react-app` 构建实现的 React 网页练习项目；
 
 ## 在线预览
-> <https://knightyun.github.io/todo-list-react/>
 
-`ts` 版本：
-> <https://knightyun.github.io/todo-list-react/todo-list-react-ts>
-
-`ts + hooks` 版本：
-> <https://knightyun.github.io/todo-list-react/todo-list-react-ts-hooks>
+- [`js` 版本](https://knightyun.github.io/todo-list-react)
+- [`ts` 版本](https://knightyun.github.io/todo-list-react/todo-list-react-ts/index.html)
+- [`ts + hooks`](https://knightyun.github.io/todo-list-react/todo-list-react-ts-hooks/index.html)
 
 ## 特性
 
