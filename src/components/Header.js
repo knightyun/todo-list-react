@@ -44,14 +44,7 @@ class Header extends React.Component {
     return (
       <header>
         <form onSubmit={this.handleSubmit}>
-          <span className="header-label">
-            ToDoList
-            <span className="header-link">
-              <a href="/" className="home">JS</a>|
-              <a href="/todo-list-react-ts/index.html">TS</a>|
-              <a href="/todo-list-react-ts-hooks/index.html">Hook</a>
-            </span>
-          </span>
+          <span className="header-label">ToDoList</span>
           <input
             className="header-input"
             type="text"

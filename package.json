@@ -62,12 +62,14 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "serve": "^11.3.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "serve": "serve docs -l 3000",
     "build": "node scripts/build.js",
-    "build-all": "node scripts/build.js && lerna run build && lerna exec -- move build ../../docs/%LERNA_PACKAGE_NAME%",
+    "build-all": "node scripts/build.js && lerna run build && lerna exec -- move /Y build ../../docs/%LERNA_PACKAGE_NAME%",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {

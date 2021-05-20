@@ -5,6 +5,12 @@
 ## 在线预览
 > <https://knightyun.github.io/todo-list-react/>
 
+`ts` 版本：
+> <https://knightyun.github.io/todo-list-react/todo-list-react-ts>
+
+`ts + hooks` 版本：
+> <https://knightyun.github.io/todo-list-react/todo-list-react-ts-hooks>
+
 ## 特性
 
 - 输入内容回车添加待做项；
@@ -12,7 +18,8 @@
 - 项目可删除，可全部清空；
 - 每项内容可编辑；
 - 支持本地存储，刷新页面数据仍然保留；
-- 包含 `ts + react` 的[版本](./packages/todo-list-react-ts)
+- `ts` 的[版本](./packages/todo-list-react-ts)
+- `ts + hooks` 的[版本](./packages/todo-list-react-ts-hooks)
 
 ## 使用
 

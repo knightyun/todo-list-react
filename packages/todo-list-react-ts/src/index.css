@@ -20,20 +20,7 @@ header form {
   font-size: 1.3em;
   color: #ddd;
 }
-.header-link {
-  display: inline-block;
-  width: 80%;
-  font-size: initial;
-  text-align: center;
-  color: #ccc;
-}
-.header-link a {
-  margin: 0 1em;
-  color: lightblue;
-}
-.header-link a.home {
-  color: cyan;
-}
+
 .header-input {
   flex: 1 1 40%;
   padding: 0.3em;
